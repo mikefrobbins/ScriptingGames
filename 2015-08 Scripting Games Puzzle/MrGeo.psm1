@@ -44,18 +44,34 @@ function Get-MrGeoInformation {
 
         if (-not($PSBoundParameters.IPAddress)) {
             Write-Verbose -Message 'Attempting to retrieve Geolocation information for your public IP Address'
-            $Results = Invoke-RestMethod -Uri 'http://www.telize.com/geoip' -TimeoutSec 30
+            $Results = Invoke-RestMethod -Uri 'http://ip-api.com/json/' -TimeoutSec 30
         }
         else {
             $Results = foreach ($IP in $IPAddress) {
                 Write-Verbose -Message "Attempting to retrieving Geolocation information for IP Address: '$IP'"
-                Invoke-RestMethod -Uri "http://www.telize.com/geoip/$IP" -TimeoutSec 30
+                Invoke-RestMethod -Uri "http://ip-api.com/json/$IP" -TimeoutSec 30
             }
         }
 
         foreach ($Result in $Results) {
-            $Result.PSTypeNames.Insert(0,'Mr.GeoInfo')
-            Write-Output $Result
+            [pscustomobject]@{
+                AutonomousSystem = $Result.as
+                City = $Result.city
+                Country = $Result.country
+                CountryCode = $Result.countryCode
+                ISP = $Result.isp
+                Latitude = $Result.lat
+                Longitude = $Result.lon
+                Organization = $Result.org
+                IPAddress = $Result.query
+                Region = $Result.region
+                RegionName = $Result.regionName
+                Status = $Result.status
+                TimeZone = $Result.timezone
+                ZipCode = $Result.zip
+                PSTypeName = 'Mr.GeoInfo'
+            }
+
         }       
 
     }
