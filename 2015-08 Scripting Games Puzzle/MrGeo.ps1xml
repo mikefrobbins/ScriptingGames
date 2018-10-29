@@ -28,19 +28,19 @@
                     <TableRowEntry>
                         <TableColumnItems>
                             <TableColumnItem>
-                                <PropertyName>ip</PropertyName>
+                                <PropertyName>IPAddress</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>longitude</PropertyName>
+                                <PropertyName>Longitude</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>latitude</PropertyName>
+                                <PropertyName>Latitude</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>continent_code</PropertyName>
+                                <PropertyName>CountryCode</PropertyName>
                             </TableColumnItem>
                             <TableColumnItem>
-                                <PropertyName>timezone</PropertyName>
+                                <PropertyName>TimeZone</PropertyName>
                             </TableColumnItem>
                         </TableColumnItems>
                     </TableRowEntry>
@@ -57,19 +57,19 @@
                     <ListEntry>
                         <ListItems>
                             <ListItem>
-                                <PropertyName>ip</PropertyName>
+                                <PropertyName>IPAddress</PropertyName>
                             </ListItem>
                             <ListItem>
-                                <PropertyName>longitude</PropertyName>
+                                <PropertyName>Longitude</PropertyName>
                             </ListItem>
                             <ListItem>
-                                <PropertyName>latitude</PropertyName>
+                                <PropertyName>Latitude</PropertyName>
                             </ListItem>
                             <ListItem>
-                                <PropertyName>continent_code</PropertyName>
+                                <PropertyName>CountryCode</PropertyName>
                             </ListItem>
                             <ListItem>
-                                <PropertyName>timezone</PropertyName>
+                                <PropertyName>TimeZone</PropertyName>
                             </ListItem>
                         </ListItems>
                     </ListEntry>
